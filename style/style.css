@@ -1,0 +1,34 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+body {
+    background-color: #fff;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- Box ---- */
+.box {
+  position:fixed;
+  left: 100px;
+  top: 100px;
+  background-color: lightgrey;
+  width: 200px;
+  height: 100px;
+}
+
+/* ---- Circle ---- */
+.circle {
+  position:fixed;
+  left: 100px;
+  top: 300px;
+  background-color: red;
+  width: 200px;
+  height: 100px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
