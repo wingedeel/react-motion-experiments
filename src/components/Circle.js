@@ -14,21 +14,25 @@ class Box extends Component {
 	  							x: spring(100),
 	  							scale:spring(1,presets.wobbly)
   							}
-      return (
+    const getRandomArbitrary = (max, min) => Math.random() * (max - min) + min
+    const leftX = getRandomArbitrary(50,300);
+    const topX = getRandomArbitrary(50,300);
 
-      <div>
+      return (
 
       	<Motion defaultStyle={startStyle} style={endStyle} onRest={this.props.onRestHandler}>
   			{({x, scale}) => 
   				<div 
   				className={this.props.className}
-  				style={{transform: `scale(${scale})`}}>
+  				style={{
+            transform: `scale(${scale})`,
+            left:leftX,
+            top: topX
+          }}>
   				</div>
   			}
-		</Motion>
-
-	</div>
-	)
+		    </Motion>
+	   )
   }
 
 }

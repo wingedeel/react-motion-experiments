@@ -25,12 +25,18 @@ class App extends Component {
 
   render() {
      const isOdd = this.state.animPhase % 2
+     let component = null;
       if (isOdd) {
-        return <Box className="box" onRestHandler={this.handleAnimationEnd}/>
+        component = <Box className="box" onRestHandler={this.handleAnimationEnd}/>
       }
       if (!isOdd) {
-        return <Circle className="circle" onRestHandler={this.handleAnimationEnd}/>
+        component = <Circle className="circle" onRestHandler={this.handleAnimationEnd}/>
       }
+    return (
+      <div>3. Popping Circles
+      {component}
+      </div>
+    )
   }
 }
 
